@@ -1,0 +1,10 @@
+#!/bin/bash
+cd repos/deployer
+git pull
+bundle install
+if [[ "$2" == "staging" ]]
+then
+  echo m | ./bin/app-release $1 $2
+else
+  ./bin/app-release $1 $2
+fi

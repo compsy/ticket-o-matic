@@ -1,0 +1,3 @@
+#!/bin/bash
+./bin/release_app $1 $2 >> ./log/autodeploy.log 2>&1
+./bin/deploy_app $1 $2 >> ./log/autodeploy.log 2>&1
